@@ -1,0 +1,25 @@
+{
+  "name": "abuja-garment-factory",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "npm@10.2.4",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "turbo run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OmololaGSME/Abuja-Garment-Factory.git"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "prettier": "^2.3.2",
+    "turbo": "^1.8.2"
+  }
+}
