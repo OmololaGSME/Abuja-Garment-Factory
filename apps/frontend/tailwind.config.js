@@ -2,8 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
-    extend: {},
-  },
+    extend: {
+      screens: {
+        'sm-land': {// landscape on mobiles/tablets
+          'raw': '(max-height: 640px)' 
+        }
+      } },
   plugins: [],
-}
+}}
 
