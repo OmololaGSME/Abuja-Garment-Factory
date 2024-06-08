@@ -4,7 +4,6 @@ import { MdOutlineMail } from 'react-icons/md'
 
 import './Navbar.css'
 
-
 const Navbar = () => {
   return (
       <div>
@@ -22,9 +21,9 @@ const Navbar = () => {
                       <br />
 
                       <ul className=" nav-links flex justify-end p-2.5 ml-2 ">
-                          <li>Services</li>
-                          <li>About Us</li>
-                          <li>Products</li>
+                          <li><a href='/services'>Services</a></li>
+                          <li><a href='/about'>About Us</a></li>
+                          <li><a href='/products'>Products</a></li>
                       </ul>
                       <button>
                          Contact Us
