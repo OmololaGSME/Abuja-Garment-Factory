@@ -1,0 +1,55 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+   
+}
+nav img {
+    width: 176px;
+    height: 160px;
+    padding: 0px 8px; 
+}
+
+nav li{
+    font-size: 24px;
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.email{
+    font-size: 24px;
+    margin-bottom: 0;
+    position: relative;
+    justify-content: end;
+}
+
+.email:hover{
+    color: rgb(66, 66, 192);
+    text-decoration: underline;
+}
+.nav-contact{
+    border: 1px solid #746858;
+    border-radius: 30px;
+    
+}
+
+@media screen and (max-width:2000px) {
+
+    
+}
+
+@media screen and (max-width:1150px) {
+    
+}
+
+@media screen and (max-width:900) {
+    
+}
+
+@media screen and (max-width:350px) {
+ .nav-links{
+    display: none;
+ }
+    
+}
