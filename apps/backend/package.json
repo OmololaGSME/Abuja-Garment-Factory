@@ -7,6 +7,8 @@
         "build": "echo 'Building backend...'",
         "start": "node index.js",
         "dev": "nodemon index.js",
+        "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+        "lint:fix": "eslint . --report-unused-disable-directives --max-warnings 0 --fix",
         "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier --write . --ext .js"
     },
@@ -14,13 +16,17 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "body-parser": "^1.20.2",
         "cors": "^2.8.5",
         "express": "^4.19.2",
         "mongo": "^0.1.0",
-        "mongoose": "^8.4.0"
+        "mongoose": "^8.4.0",
+        "nodemailer": "^6.9.13",
+        "postmark": "^4.0.2"
     },
     "devDependencies": {
         "eslint": "^9.3.0",
+        "eslint-plugin-node": "^11.1.0",
         "nodemon": "^3.1.0",
         "prettier": "^3.2.5"
     }

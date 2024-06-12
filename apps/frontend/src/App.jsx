@@ -1,6 +1,4 @@
-
 import Routing from "./Routing"
-import Products from "./pages/Products/products"
 
 function App() {
 
@@ -17,7 +15,6 @@ function App() {
   return (
     <>
       <Routing />
-      <Products />
     </>
   )
 }

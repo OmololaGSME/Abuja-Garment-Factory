@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from '../Components/Navbar/Navbar';
-import HomeSlider from '../Components/HomeSlider/HomeSlider';
-import Services from '../Components/Services/Services'
-import Testimonials from '../Components/Testimonials/Testimonials';
-import FaqPage from '../Components/FaqPage/FaqPage';
-import Footer from '../Components/Footer/Footer'
+import Navbar from '../components/Navbar/Navbar';
+import HomeSlider from '../components/HomeSlider/HomeSlider';
+import Services from '../components/Services/Services'
+import Testimonials from '../components/Testimonials/Testimonials';
+import FaqPage from '../components/FaqPage/FaqPage';
+import Footer from '../components/Footer/Footer'
 
 
 
