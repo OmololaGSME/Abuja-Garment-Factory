@@ -1,7 +1,7 @@
 import React from 'react'
 import servicesData from '../lib/servicesData'
 
-import ServiceCard from '../components/Service-Card'
+import ServiceCard from '../Components/Service-Card'
 const Services = () => {
     return (
         // header
