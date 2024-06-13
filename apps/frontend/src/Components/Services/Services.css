@@ -1,0 +1,64 @@
+h3 {
+    color: #512f2d;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@media screen and (max-width: 2000px) {
+}
+
+@media screen and (max-width: 900px) {
+    .services {
+        margin: 1.25rem;
+        text-align: center;
+    }
+    .container {
+        margin: 1rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        align-items: center;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+    }
+    .heading {
+        font-size: 16px;
+    }
+    .services {
+        margin: 0px;
+    }
+
+    p {
+        font-size: 0.5rem;
+        line-height: 1rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    p {
+        font-size: 0.5rem;
+        line-height: 1rem;
+        font-weight: 700;
+    }
+
+    .heading {
+        font-size: 1rem;
+    }
+
+    .services {
+        margin-top: 0px;
+        align-items: center;
+    }
+
+    .container {
+        margin: 0px;
+    }
+}
