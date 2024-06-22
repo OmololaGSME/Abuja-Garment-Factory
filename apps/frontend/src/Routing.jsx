@@ -8,7 +8,7 @@ import ForgotPassword from './pages/Forgot-Password'
 import AboutPage from './pages/AboutPage'
 import FaqsTest from './pages/FaqsTest'
 import HomePage from './pages/HomePage'
-import Products from './pages/Products/products'
+// import Products from './pages/Products/products'
 
 const Routing = () => {
     return (
@@ -28,9 +28,6 @@ const Routing = () => {
             </Routes>
             <Routes>
                 <Route path='/about' element={<AboutPage />}></Route>
-            </Routes>
-            <Routes>
-                <Route path='/test' element={<FaqsTest />}></Route>
             </Routes>
             <Routes>
                 <Route path='/home' element={<HomePage />}></Route>
