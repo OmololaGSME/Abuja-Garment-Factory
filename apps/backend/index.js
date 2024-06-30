@@ -1,15 +1,24 @@
-const express = require('express')
-const cors = require('cors')
-const app = express()
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser')
+const dotenv = require('dotenv')
+const route = require('./routes/router')
+require('./config/database')
 
-app.use(cors())
+dotenv.config({ path: '.env' })
 
-const port = 3001
+app.use(bodyParser.json());
+app.use(
+    bodyParser.urlencoded({
+        extended: true,
+    })
+);
 
-app.get('/', (req, res) => {
-    res.send('Hello world')
-})
+// use routes
+app.use('/', route);
+
+const port = 3001;
 
 app.listen(port, () => {
-    console.log(`Listening on port ${port}`)
-})
+    console.log(`Listening on port ${port}`);
+});

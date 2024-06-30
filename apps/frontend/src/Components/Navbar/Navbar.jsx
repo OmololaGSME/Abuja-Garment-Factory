@@ -76,6 +76,7 @@ const Navbar = () => {
                                         </li>
                                     </ul>
 
+
                                     <IoIosCloseCircleOutline
                                         className="absolute bottom-0 right-0"
                                         onClick={() => setToogleMenu(false)}
@@ -88,6 +89,7 @@ const Navbar = () => {
             </section>
         </nav>
     )
+
 }
 
 export default Navbar
