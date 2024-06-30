@@ -7,13 +7,21 @@ import AdminLogin from './pages/Admin-Login'
 import ForgotPassword from './pages/Forgot-Password'
 import AboutPage from './pages/AboutPage'
 import HomePage from './pages/HomePage'
+
 import Products from './pages/Products/products'
+
+import AdminPage from './pages/AdminPage'
+import ImageSavedPage from './pages/ImageSavedPage'
+import ProductsUploadPage from './pages/ProductsUploadPage'
+
+
 
 const Routing = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Test />}></Route>
+
                 <Route path="/services" element={<Services />}></Route>
                 <Route
                     path="/admin/services"
@@ -27,13 +35,29 @@ const Routing = () => {
             </Routes>
             <Routes>
                 <Route path='/about' element={<AboutPage />}></Route>
+
             </Routes>
             <Routes>
-                <Route path='/home' element={<HomePage />}></Route>
+                <Route path="/home" element={<HomePage />}></Route>
             </Routes>
+            <Routes>
+                <Route path="/admin" element={<AdminPage />}></Route>
+            </Routes>
+            <Routes>
+                <Route path="/image" element={<ImageSavedPage />}></Route>
+
+            </Routes>
+            <Routes>
+                <Route path="/upload" element={<ProductsUploadPage />}></Route>
+            </Routes>
+
             <Routes>
                 <Route path='/products' element={<Products />}></Route>
             </Routes>
+
+           
+            
+
         </BrowserRouter>
     )
 }

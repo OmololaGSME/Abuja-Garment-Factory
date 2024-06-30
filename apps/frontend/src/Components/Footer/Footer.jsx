@@ -9,7 +9,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className="wraper ">
-            <div className=" contact flex">
+            <div className=" contact flex  justify-center">
                 <div className="flex mb-0 p-0 ">
                     <div className="logo">
                         <img src={logo} alt="Agf-logo" />
@@ -47,12 +47,14 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <div className=" location lg:font-bold flex ">
+                    <div className=" hidden lg:font-bold lg:flex  ">
                          G14:B2 Say
                         Plaza, opposite Utako market, Utako
                     </div>
                     <div className="g-map">
                         <iframe
+
+                        className='w-full '
                             width="520"
                             height="280"
                             frameborder="0"
@@ -69,8 +71,8 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="footer ">
-                <ul>
+            <div className="footer lg:p-4 ">
+                <ul className='flex justify-between text-center '>
                     <li>
                         <a href="#">Manage Cookies</a>
                     </li>

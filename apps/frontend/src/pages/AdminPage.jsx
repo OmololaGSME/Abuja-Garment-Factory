@@ -1,17 +1,17 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbar'
+import AdminNavbar from '../Container/AdminNavbar/AdminNavbar'
+import AdminServices from '../Container/AdminServices/AdminServices'
 import HomeSlider from '../components/HomeSlider/HomeSlider'
-import Services from '../components/Services/Services'
 import Testimonials from '../components/Testimonials/Testimonials'
 import FaqPage from '../components/FaqPage/FaqPage'
 import Footer from '../components/Footer/Footer'
 
-const HomePage = () => {
+const AdminPage = () => {
     return (
         <div>
-            <Navbar />
+            <AdminNavbar />
             <HomeSlider />
-            <Services />
+            <AdminServices />
             <Testimonials />
             <FaqPage />
             <Footer />
@@ -19,4 +19,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default AdminPage
