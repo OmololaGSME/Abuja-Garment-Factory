@@ -2,6 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
+    extend: {
+      screens: {
+        'sm-land': {// landscape on mobiles/tablets
+          'raw': '(max-height: 640px)' 
+        }
+      } },
     fontSize: {
       AgH3: '32px'
     },
@@ -11,8 +17,7 @@ export default {
       secondaryNine: '#512F2D',
       blackOne: '#D3D2D2'
     },
-    extend: {},
   },
   plugins: [],
-}
+}}
 

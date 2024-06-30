@@ -2,8 +2,8 @@ import React from 'react';
 import Image1 from '../assets/workplace-seamstress-office-with-sewing-machine-table 1.png';
 import Image2 from '../assets/pexels-kseniachernaya-3965543 1.png';
 import Image3 from '../assets/IMG-20240508-WA0007 1.png'
-import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
+import Footer from '../Components/Footer/Footer';
+import Navbar from '../Components/Navbar/Navbar';
 
 const AboutPage = () => {
     return (
