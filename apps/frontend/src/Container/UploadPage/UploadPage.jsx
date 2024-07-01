@@ -31,7 +31,7 @@ const UploadPage = () => {
               </a>
           </div>
           <div className="flex justify-center gap-8 mb-96">
-              <button className="bg-pink-900 rounded-full p-3 text-white">
+              <button className="bg-primary rounded-full p-3 text-white">
                   Save Changes
               </button>
               <button className=" rounded-full p-3 border">Cancel edit</button>

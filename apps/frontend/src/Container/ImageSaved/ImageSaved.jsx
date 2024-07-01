@@ -12,7 +12,7 @@ const ImageSaved = () => {
               <img
                   src={check}
                   alt="check image"
-                  className="block m-auto bg-emerald-600 border rounded-full p-8"
+                  className="block m-auto bg-secondary border rounded-full p-8"
               />
           </div>
           <div className=" mt-5 mb-56 text-center ">

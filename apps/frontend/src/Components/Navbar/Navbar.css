@@ -1,23 +1,141 @@
-.nav-small-screen {
-    border: 1px solid black;
-    z-index: 999;
-    padding: 0.5rem 2rem;
-    width: 50%;
-    height:100%,
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    margin: 1rem;
+    
+}
+
+.navbar p{
+    display: flex;
+    justify-content: end;
 
 }
 
-@media screen and (max-width: 2000px) {
+
+
+.nav-links  {
+    display: flex;
+    justify-content:end;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height:2rem;
+    align-items: end;
+
+}
+.navbar .menu {
+    display:none;
 }
 
-@media screen and (max-width: 1150px) {
-}
 
-@media screen and (min-width: 800) {
-    .nav-small-screen {
+@media screen and (max-width: 800px) {
+    
+    .nav-links ul {
         display: none;
     }
+
+    .navbar #mobile-nav-links ,
+    .navbar #hide-mobile-nav-links {
+    display: block;
+    position: fixed;
+    left:0;
+    top: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50%;
+    height: 100vh;
+    background-color:#fff;
+    transition: all 0.3s;
+    z-index: 111;
+
+   
+
+}
+
+.navbar #mobile-nav-links {
+    left: 0;
+}
+
+  .navbar #hide-mobile-nav-links {
+    left: -100%;
+  }
+
+      .navbar #mobile-nav-links li:first-child,
+    .navbar #hide-mobile-nav-links li{
+       
+        margin-bottom: 5rem;
+    } 
+
+      .navbar #mobile-nav-links li:last-child,
+    .navbar #hide-mobile-nav-links li{
+       position: absolute;
+       bottom: 0;
+       right: 0;
+    }
+
+    .navbar .menu{
+        display:block;
+        border:1px solid black;    
+    } 
 }
 
 @media screen and (max-width: 350px) {
+ 
+    .nav-links ul {
+        display: none;
+    }
+
+    
+    .navbar #mobile-nav-links ,
+    .navbar #hide-mobile-nav-links {
+    display: block;
+    position: fixed;
+    left:0;
+    top: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50%;
+    height: 100vh;
+    background-color:#fff;
+    transition: all 0.3s;
+    z-index: 111;
+
+   
+
 }
+
+.navbar #mobile-nav-links {
+    left: 0;
+}
+
+  .navbar #hide-mobile-nav-links {
+    left: -100%;
+  }
+
+      .navbar #mobile-nav-links li:first-child,
+    .navbar #hide-mobile-nav-links li{
+       
+        margin-bottom: 5rem;
+    } 
+
+      .navbar #mobile-nav-links li:last-child,
+    .navbar #hide-mobile-nav-links li{
+       position: absolute;
+       bottom: 0;
+       right: 0;
+    }
+
+    .navbar .menu{
+        display:block;
+        border:1px solid black
+        
+    }
+
+    
+
+    
+
+
+}
+
+
+
