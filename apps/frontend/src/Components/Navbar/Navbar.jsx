@@ -7,86 +7,78 @@ import { IoIosCloseCircleOutline } from 'react-icons/io'
 import './Navbar.css'
 
 const Navbar = () => {
-    const [toogleMenu, setToogleMenu] = useState(false)
+    const [toggleMenu, setToggleMenu] = useState(false)
+
+    const showMenu = () =>{
+        setToggleMenu(!toggleMenu);
+    };
+
+     const hideMenu = () =>{
+        setToggleMenu(false);
+    };
+
     return (
-        <nav className=" m-4">
-            <div className="flex justify-between">
-                <div className="nav-logo ">
-                    <img src={logo} alt="nav-logo" className="w-20" />
-                </div>
-
-                <div className="">
-                    <p className="   email flex text-black justify-end n">
-                        <MdOutlineMail className="mt-1" />
+        <nav className=" container navbar fixed lg:relative top-0 z-10  bg-white  ">
+            <div className="nav-logo  ">
+                <img src={logo} alt="nav-logo" className="w-20" />
+            </div>
+            <div>
+                <p className="mail">
+                    {' '}
+                    <MdOutlineMail className="mt-1" />
+                    <a href="mailto:abujafashionstore@gmail.com">
+                        {' '}
                         abujafashionstore@gmail.com
-                    </p>
-
-                    <ul className=" hidden md:flex  justify-center text-2xl ">
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li>
-                            <a href="#about">About Us</a>
-                        </li>
-                        <li>
-                            <a href="#products">Products</a>
-                        </li>
-                        <button class=" text-black border text-xl px-2 py rounded-full">
+                    </a>
+                </p>
+                <ul
+                    className=" nav-links"
+                    id={
+                        toggleMenu
+                            ? 'mobile-nav-links'
+                            : 'hide-mobile-nav-links'
+                    }
+                >
+                    <li className="lg:hidden">
+                        <img src={logo} alt="nav-logo" className="w-20" />
+                    </li>
+                    <li onClick={hideMenu}>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li onClick={hideMenu}>
+                        <a href="#about">About Us</a>
+                    </li>
+                    <li onClick={hideMenu}>
+                        <a href="#products">Products</a>
+                    </li>
+                    <li onClick={hideMenu}>
+                        <button className=" text-black border text-xl px-2 py rounded-full hidden lg:block">
                             <a href="#contact">Contact Us</a>
                         </button>
-                    </ul>
+                    </li>
+                    <li className="lg:hidden" onClick={hideMenu}>
+                        {' '}
+                        <IoIosCloseCircleOutline />
+                    </li>
+                </ul>
+                <div className="menu fixed bottom-0 left-0 rounded w-full  bg-white z-10">
+                    <div onClick={showMenu}>
+                        {toggleMenu ? (
+                            <IoIosCloseCircleOutline />
+                        ) : (
+                            <IoMdMenu size={27} />
+                        )}
+                        <div className=" md:text-2xl float-left">Menu</div>
+                    </div>
+
+                    <div>
+                        <button class=" text-black border text-xl px-5 py rounded-full mb-2">
+                            <a href="#contact">Contact Us</a>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <section>
-                <div>
-                    <nav className=" nav-small-screen lg:hidden md:hidden  bg-white  rounded fixed bottom-10 left-0 ">
-                        <div>
-                            <IoMdMenu
-                                onClick={() => {
-                                    setToogleMenu(true)
-                                }}
-                                className="text-2xl opacity-0"
-                            />
-                            <div className="flex justify-between">
-                                Menu
-                                <button class=" text-black border text-xl px-2 py rounded-full flex-end">
-                                    <a href="#contact">Contact Us</a>
-                                </button>
-                            </div>
-                        </div>
-                        {toogleMenu && (
-                            <div className="">
-                                <div className="small-screen-nav-logo w-12">
-                                    <img
-                                        src={logo}
-                                        alt="nav-logo"
-                                        className="mr-52"
-                                    />
-                                </div>
-                                <div>
-                                    <ul className=" w-52 h-full  text-xl cursor-pointer p-0 m-0">
-                                        <li>
-                                            <a href="#services">Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="#about">About Us</a>
-                                        </li>
-                                        <li>
-                                            <a href="#products">Products</a>
-                                        </li>
-                                    </ul>
-
-
-                                    <IoIosCloseCircleOutline
-                                        className="absolute bottom-0 right-0"
-                                        onClick={() => setToogleMenu(false)}
-                                    />
-                                </div>
-                            </div>
-                        )}
-                    </nav>
-                </div>
-            </section>
+           
         </nav>
     )
 

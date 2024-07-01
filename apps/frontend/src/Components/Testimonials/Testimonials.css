@@ -68,6 +68,16 @@
   
 }
 
+@media screen and (max-width:450px) {
+    .swiper-container{
+    zoom:0.3;
+    width: 100%;
+
+   
+  }
+
+}
+
 @media screen and (max-width:350px) {
   .swiper-container{
     zoom:0.5;
@@ -79,8 +89,6 @@
 
   .swiper-slide {
      width:10rem;
-  
- 
   position: relative;
   align-items: center;
   justify-content: center;
@@ -89,9 +97,6 @@
   .swiper-slide img{
   border-radius: 0.2rem;
   height: 100%;
- 
-  
-
   object-fit: cover;
 }
   
