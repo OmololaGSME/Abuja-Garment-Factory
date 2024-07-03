@@ -1,5 +1,5 @@
 ::before,
-::after{
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,55 +27,40 @@
 
 .swiper-container {
   height: 100%;
-  
   position: relative;
   align-items: center;
- 
   object-fit: cover;
 }
 
 .swiper-slide {
   width: 20rem;
- 
   position: relative;
   align-items: center;
   justify-content: center;
 }
 
-.swiper-slide img{
+.swiper-slide img {
   border-radius: 2rem;
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-
-.swiper-button-prev:after, .swiper-button-next:after{
+.swiper-button-prev:after,
+.swiper-button-next:after {
   color: pink;
-  font-size:1rem ;
+  font-size: 1rem;
   border-radius: 70%;
   padding: 0.5rem;
   background: rgb(241, 237, 237);
 }
 
-
-@media screen and (max-width:2000px) {
-  .swiper-container{
-   justify-content: center;
-   display: block;
-   margin: 0 auto;
+@media screen and (max-width: 2000px) {
+  .swiper-container {
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
   }
-  
-}
-
-@media screen and (max-width:450px) {
-    .swiper-container{
-    zoom:0.3;
-    width: 100%;
-
-   
-  }
-
 }
 
 @media screen and (max-width:350px) {
@@ -88,12 +73,17 @@
 
 
   .swiper-slide {
-     width:10rem;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
+    width: 10rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .swiper-slide img {
+    border-radius: 0.2rem;
+    height: 100%;
+    object-fit: cover;
+  }
   .swiper-slide img{
   border-radius: 0.2rem;
   height: 100%;
@@ -101,4 +91,3 @@
 }
   
 }
-
