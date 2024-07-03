@@ -7,14 +7,10 @@ export default {
          'primary':'#746858',
          'secondary':'#A0D8B3'
 
-      }
+      },
      
     
-      colors:{
-         'primary':'#746858',
-         'secondary':'#A0D8B3'
-
-      }
+     
      
     
       screens: {
@@ -33,5 +29,5 @@ export default {
     },
   },
   plugins: [],
-}}
+}
 

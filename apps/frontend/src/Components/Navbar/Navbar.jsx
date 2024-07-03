@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <nav className=" container navbar fixed lg:relative top-0 z-10  bg-white  ">
             <div className="nav-logo  ">
-                <img src={logo} alt="nav-logo" className="w-20" />
+                <img src={logo} alt="nav-logo" className="mr-52" />
             </div>
             <div>
                 <p className="mail">
@@ -43,13 +43,13 @@ const Navbar = () => {
                         <img src={logo} alt="nav-logo" className="w-20" />
                     </li>
                     <li onClick={hideMenu}>
-                        <a href="#services">Services</a>
+                        <a href="/services">Services</a>
                     </li>
                     <li onClick={hideMenu}>
-                        <a href="#about">About Us</a>
+                        <a href="/about">About Us</a>
                     </li>
                     <li onClick={hideMenu}>
-                        <a href="#products">Products</a>
+                        <a href="/products">Products</a>
                     </li>
                     <li onClick={hideMenu}>
                         <button className=" text-black border text-xl px-2 py rounded-full hidden lg:block">

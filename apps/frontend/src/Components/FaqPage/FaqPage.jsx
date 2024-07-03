@@ -43,7 +43,7 @@ const FaqPage = () => {
         }
 
     return (
-        <div className="mt-10 text-center">
+        <div className="faq mt-10 text-center">
             <h2 className="font-bold text-center lg:text-3xl">
                 Frequently asked questions
             </h2>

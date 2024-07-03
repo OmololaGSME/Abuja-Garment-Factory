@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import servicesData from '../lib/servicesData'
+import {ServicesPageData} from '../lib/servicesData'
 import ServiceCard from '../components/Service-Card'
-import AdminServicePopUp from '../Components/Admin-Service-PopUp'
+import AdminServicePopUp from '../components/Admin-Service-PopUp'
 const AdminServices = () => {
     const [popUp, setPopUp] = useState({
         show: false,
@@ -16,7 +16,7 @@ const AdminServices = () => {
             </h1>
 
             <section className="mt-6 w-[90%] flex flex-col  gap-y-10 mx-auto">
-                {servicesData.map((product) => (
+                {ServicesPageData.map((product) => (
                     <ServiceCard
                         img={product.img}
                         popUp={popUp}

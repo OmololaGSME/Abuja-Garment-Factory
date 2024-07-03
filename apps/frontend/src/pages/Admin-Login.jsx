@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../assets/auth/logo.png'
 import banner from '../assets/auth/auth-banner.png'
-import AuthForm from '../Components/Auth-Form'
+import AuthForm from '../components/Auth-Form'
 
 const AdminLogin = () => {
     return (
