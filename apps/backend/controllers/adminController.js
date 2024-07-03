@@ -1,5 +1,9 @@
 const AdminModel = require('../models/adminModel');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken')
+const dotenv = require('dotenv');
+
+dotenv.config({ path: '.env' })
 
 exports.seedAdmin = async (req, res) => {
     try {
@@ -36,13 +40,68 @@ exports.login = async (req, res) => {
         if (!admin) {
             res.status(404).send({ message: 'Admin not found' })
         }
-        const hashedPassword = await bcrypt.hash(password, 10)
-        const isPasswordMatch = await bcrypt.compare(hashedPassword, admin.password);
+        const isPasswordMatch = await bcrypt.compare(password, admin.password);
         if (!isPasswordMatch) {
             res.status(401).send({ message: 'Incorrect details' })
         }
-        res.status(201).send({ message: 'Login successful', admin })
+        const accessToken = jwt.sign({ username: admin.username }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRY });
+        const refreshToken = jwt.sign({ username: admin.username }, process.env.REFRESH_SECRET, { expiresIn: process.env.REFRESH_EXPIRY });
+
+        admin.refreshToken = refreshToken;
+        await admin.save();
+
+        res.status(201).send({
+            message: 'Login successful',
+            accessToken,
+            refreshToken
+        });
     } catch (error) {
         res.send(error)
     }
 }
+
+exports.refreshToken = async (req, res) => {
+    const { refreshToken } = req.body;
+
+    if (!refreshToken) {
+        return res.status(403).send({ message: 'Refresh token is required' });
+    }
+
+    try {
+        const admin = await AdminModel.findOne({ refreshToken: refreshToken });
+        if (!admin) {
+            return res.status(403).send({ message: 'Invalid refresh token' });
+        }
+
+        jwt.verify(refreshToken, process.env.REFRESH_SECRET, (err, user) => {
+            if (err) {
+                return res.status(403).send({ message: 'Invalid refresh token' });
+            }
+
+            const accessToken = jwt.sign({ username: user.username }, process.env.JWT_SECRET, { expiresIn: '20m' });
+            res.status(201).send({
+                accessToken
+            });
+        });
+    } catch (error) {
+        res.status(500).send({ message: 'Error refreshing token', error });
+    }
+};
+
+exports.logout = async (req, res) => {
+    const { token } = req.body;
+
+    try {
+        const admin = await AdminModel.findOne({ refreshToken: token });
+        if (!admin) {
+            return res.status(403).send({ message: 'Invalid refresh token' });
+        }
+
+        admin.refreshToken = null;
+        await admin.save();
+
+        res.status(200).send({ message: 'Logout successful' });
+    } catch (error) {
+        res.status(500).send({ message: 'Error logging out', error });
+    }
+};
