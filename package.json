@@ -9,6 +9,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "format": "turbo run format"
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "eslint": "^7.32.0",
+    "gh-pages": "^6.1.1",
     "prettier": "^2.3.2",
     "turbo": "^1.8.2"
   },
