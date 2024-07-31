@@ -1,105 +1,97 @@
 .wraper {
-    
     height: 100%;
-  
-    padding: 45px 60px ;
-  
-    background: #D3D2D2;
-   
+
+    padding: 45px 60px;
+
+    background: #d3d2d2;
+
     flex-direction: row;
 }
 
+.g-map iframe {
+    max-width: 500px;
+}
 
 li {
     display: flex;
     padding: 1rem;
 }
 
-.contact-details img{
+.contact-details img {
     width: 16px;
 }
 
-.g-map {
-    width: 600px;
-    
-}
 
-.footer{
-    padding: 1rem;
-}
+@media screen and (max-width:700px) {
 
-.footer ul {
- display: flex;
- justify-content: space-between;
-}
-
-@media screen and (max-width:2000px) {
-    
-}
-
-@media screen and (max-width:1150px) {
-
-     .wraper{
-        display:flex;
-        flex-direction: column;
-    }
-    
-}
-
-@media screen and (max-width:900px) {
-
-     .wraper{
-        display:flex;
-        flex-direction: column;
-    }
-    
-}
-
-@media screen and (max-width:350px) {
-    .wraper{
-        display:flex;
-        flex-direction: column;
+     .contact-details {
+        font-size: 12px;
+        margin-top: 0px;
     }
 
-    .logo img{
+     .logo img {
         max-width: 116px;
     }
 
-    .contact{
+    
+    .contact {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-   
-
-
-    .contact-details{
-        font-size:12px ;
-        margin-top: 0px;
-        
-        
+    .contact-details li {
+        padding: 0.3rem;
+        margin-right: 4px;
     }
 
-     .contact-details li{
-        padding:0.3rem;
+        .footer ul {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        align-items: center;
+        margin: 0px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 350px) {
+    .wraper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo img {
+        max-width: 116px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details {
+        font-size: 12px;
+        margin-top: 0px;
+    }
+
+    .contact-details li {
+        padding: 0.3rem;
         margin-right: 4px;
-            
-        
-     }
+    }
 
-     .location{
-        display: none;
-     }
+    iframe {
+        width: 100%;
+    }
 
-     .gmap iframe{
-        position: relative;
-        width:100%;
-     }
-
-   
-
-
-    
-   
+    .footer ul {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        align-items: center;
+        margin: 0px;
+    }
 }

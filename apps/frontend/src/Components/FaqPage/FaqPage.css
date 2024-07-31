@@ -1,4 +1,4 @@
-p{
+.faq p{
     color: #6C3E3B;
 }
 
@@ -19,6 +19,9 @@ p{
    border-bottom: 1px solid #6C3E3B;
    text-align: justify;
 }
+.items:last-child{
+    border-bottom: none;
+}
 
 .title{
     display: flex;
@@ -38,19 +41,11 @@ p{
     min-height: 50px;
     transition: all 0.5 cubic-bezier(1,0,1,0);
 }
-@media screen and (max-width:2000px) {
-    
-}
-
-@media screen and (max-width:900px) {
-
-    
-}
 
 
 @media screen and (max-width:900px) {
      .accordion{
-    width: 400px;
+    width: 600px;
     height: 100vh;
     gap:32px ;
     text-align: center;
@@ -60,16 +55,44 @@ p{
 }
 
 .title{
-    font-size: 12px;
+    font-size: 1.5;
    
     display: flex;
 }
 
 .content{
-    font-size: 14px;
+    font-size: 1.2rem;
+    line-height: 24px;
+    color: #6C3E3B;
+}
+}
+
+@media screen and (max-width:400px) {
+
+      .accordion{
+    width: 300px;
+    height: 100vh;
+    gap:32px ;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+                
+}
+
+.title{
+    font-size: 0.8rem;
+   
+    display: flex;
+}
+
+.content{
+    font-size: 1rem;
     line-height: 24px;
 }
+    
 }
+
 
 @media screen and (max-width:350px) {
     .accordion{

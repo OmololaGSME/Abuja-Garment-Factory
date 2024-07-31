@@ -3,6 +3,16 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      colors:{
+         'primary':'#746858',
+         'secondary':'#A0D8B3'
+
+      },
+     
+    
+     
+     
+    
       screens: {
         'sm-land': {// landscape on mobiles/tablets
           'raw': '(max-height: 640px)' 
@@ -19,5 +29,5 @@ export default {
     },
   },
   plugins: [],
-}}
+}
 

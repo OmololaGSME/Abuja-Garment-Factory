@@ -91,7 +91,7 @@
     }
 
     .slider img{
-        width: 30rem;
+       max-width:30rem;
         height: 12rem;
         
     }
