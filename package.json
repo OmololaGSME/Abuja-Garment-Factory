@@ -7,8 +7,6 @@
     "apps/*"
   ],
   "scripts": {
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -19,10 +17,8 @@
     "type": "git",
     "url": "https://github.com/OmololaGSME/Abuja-Garment-Factory.git"
   },
-  "homepage": "http://DBasic-cmd.github.io/Abuja-Garment-Factory-copy",
   "devDependencies": {
     "eslint": "^7.32.0",
-    "gh-pages": "^6.1.1",
     "prettier": "^2.3.2",
     "turbo": "^1.8.2"
   },
