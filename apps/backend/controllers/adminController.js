@@ -29,7 +29,7 @@ exports.seedAdmin = async (req, res) => {
         }
         console.log('Admins seeded successfully');
     } catch (error) {
-        res.status(500).send({ message: 'Error seeding admins', error });
+     res.status(500).send({ message: 'Error seeding admins', error });
     }
 }
 
@@ -38,11 +38,11 @@ exports.login = async (req, res) => {
         const { username, password } = req.body;
         const admin = await AdminModel.findOne({ username: username })
         if (!admin) {
-            res.status(404).send({ message: 'Admin not found' })
+            return res.status(404).send({ message: 'Admin not found' })
         }
         const isPasswordMatch = await bcrypt.compare(password, admin.password);
         if (!isPasswordMatch) {
-            res.status(401).send({ message: 'Incorrect details' })
+            return res.status(401).send({ message: 'Incorrect details' })
         }
         const accessToken = jwt.sign({ username: admin.username }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRY });
         const refreshToken = jwt.sign({ username: admin.username }, process.env.REFRESH_SECRET, { expiresIn: process.env.REFRESH_EXPIRY });
@@ -50,13 +50,13 @@ exports.login = async (req, res) => {
         admin.refreshToken = refreshToken;
         await admin.save();
 
-        res.status(201).send({
+        return res.status(201).send({
             message: 'Login successful',
             accessToken,
             refreshToken
         });
     } catch (error) {
-        res.send(error)
+        res.json(error)
     }
 }
 
