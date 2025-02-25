@@ -1,60 +1,48 @@
-import React from 'react'
-import logo from '../../assets/AGF LOGO 1 (1).png'
-import insta from '../../assets/Clip path group.png'
-import call from '../../assets/Group.png'
-import mail from '../../assets/Vector.png'
-import { IoLocationOutline } from 'react-icons/io5'
-import './Footer.css'
+import React from 'react';
+import logo from '../../assets/AGF LOGO 1 (1).png';
+import insta from '../../assets/Clip path group.png';
+import call from '../../assets/Group.png';
+import mail from '../../assets/Vector.png';
+import { IoLocationOutline } from 'react-icons/io5';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className="wraper ">
-            <div className=" contact flex  justify-center">
-                <div className="flex mb-0 p-0 ">
+        <div className="wraper   " id="contact">
+            <div className=" contact flex  justify-between">
+                <div className=" footer-details flex   p-0 ">
                     <div className="logo">
                         <img src={logo} alt="Agf-logo" />
                     </div>
-                    <div className="contact-details p-0  ">
-                        <ul className=" lg:mt-20">
-                            <li>
+                    <div className="contact-details p-0 mr-0 ">
+                        <ul className=" lg:mt-20 ">
+                            <li className="contact-icon">
                                 <img src={call} alt="call-logo" />
                                 +2347037422636
                             </li>
-                            <li>
-                                <img
-                                    src={insta}
-                                    alt="insta-logo"
-                                    className="text-xs"
-                                />
+                            <li className="contact-icon">
+                                <img src={insta} alt="insta-logo" />
                                 abujagarmentfactory
                             </li>
-                            <li>
-                                <img
-                                    src={mail}
-                                    alt="mail-logo"
-                                    className="text-xs"
-                                />
+                            <li className="contact-icon">
+                                <img src={mail} alt="mail-logo" />
                                 abujafashionstore@gmail.com
                             </li>
-                            <li className='lg:hidden'>
-                                 <IoLocationOutline className='text-4xl mr-1' />{' '}
-                                    G14:B2 Say Plaza, opposite Utako market,
-                                    Utako
-
+                            <li className=" contact-icon lg:hidden">
+                                <IoLocationOutline className="text-AgH3 mr-1" />{' '}
+                                G14:B2 Say Plaza, opposite Utako market, Utako
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div>
-                    <div className=" hidden lg:font-bold lg:flex  ">
-                         G14:B2 Say
-                        Plaza, opposite Utako market, Utako
+                <div className=" ">
+                    <div className="footer-address hidden lg:font-bold lg:flex  ">
+                        G14:B2 Say Plaza, opposite Utako market, Utako
                     </div>
-                    <div className="g-map">
+                    <div className="g-map ">
                         <iframe
-
-                        className='w-full '
+                            className="w-full "
                             width="520"
                             height="280"
                             frameborder="0"
@@ -68,24 +56,21 @@ const Footer = () => {
                             </a>
                         </iframe>
                     </div>
+
+                    <div className="footer lg:p-4 ">
+                        <ul className="flex justify-between ">
+                            <li>
+                                <a href="/developer/note">Developer's Note</a>
+                            </li>
+                            <li>
+                                <a href="/privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <div className="footer lg:p-4 ">
-                <ul className='flex justify-between text-center '>
-                    <li>
-                        <a href="#">Manage Cookies</a>
-                    </li>
-                    <li>
-                        <a href="#">Developer's Note</a>
-                    </li>
-                    <li>
-                        <a href="#">Accessibility</a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

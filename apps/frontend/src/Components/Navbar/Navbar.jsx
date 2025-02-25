@@ -18,11 +18,13 @@ const Navbar = () => {
     };
 
     return (
-        <nav className=" container navbar fixed lg:relative top-0 z-10  bg-white  ">
+        <nav className="  navbar fixed px-10 top-0 z-10   bg-white ">
             <div className="nav-logo  ">
-                <img src={logo} alt="nav-logo" className="mr-52" />
+                <a href="/home">
+                    <img src={logo} alt="nav-logo" className="mr-52 " />
+                </a>
             </div>
-            <div>
+            <div className="content-end">
                 <p className="mail">
                     {' '}
                     <MdOutlineMail className="mt-1" />
@@ -39,8 +41,10 @@ const Navbar = () => {
                             : 'hide-mobile-nav-links'
                     }
                 >
-                    <li className="lg:hidden">
-                        <img src={logo} alt="nav-logo" className="w-20" />
+                    <li className=" smallscreen-logo lg:hidden  ">
+                        <a href="/home">
+                            <img src={logo} alt="nav-logo" className="w-20" />
+                        </a>
                     </li>
                     <li onClick={hideMenu}>
                         <a href="/services">Services</a>
@@ -52,16 +56,16 @@ const Navbar = () => {
                         <a href="/products">Products</a>
                     </li>
                     <li onClick={hideMenu}>
-                        <button className=" text-black border text-xl px-2 py rounded-full hidden lg:block">
+                        <button className="  text-black border text-xl px-2 py rounded-full hidden   lg:block">
                             <a href="#contact">Contact Us</a>
                         </button>
                     </li>
-                    <li className="lg:hidden" onClick={hideMenu}>
+                    <li className=" nav-close lg:hidden  " onClick={hideMenu}>
                         {' '}
                         <IoIosCloseCircleOutline />
                     </li>
                 </ul>
-                <div className="menu fixed bottom-0 left-0 rounded w-full  bg-white z-10">
+                <div className="menu fixed bottom-10 left-0 rounded w-full  bg-white z-10 ">
                     <div onClick={showMenu}>
                         {toggleMenu ? (
                             <IoIosCloseCircleOutline />
@@ -72,15 +76,14 @@ const Navbar = () => {
                     </div>
 
                     <div>
-                        <button class=" text-black border text-xl px-5 py rounded-full mb-2">
-                            <a href="#contact">Contact Us</a>
+                        <button className=" text-black border text-center px-5 py rounded-full mb-2 ml-16">
+                            <a href="/contact">Contact Us</a>
                         </button>
                     </div>
                 </div>
             </div>
-           
         </nav>
-    )
+    );
 
 }
 

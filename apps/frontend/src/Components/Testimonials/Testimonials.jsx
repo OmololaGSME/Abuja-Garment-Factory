@@ -26,10 +26,10 @@ const Testimonials = () => {
 
   return (
       <div>
-          <h3 className="lg:text-3xl text-center font-bold m-8 text-black">
+          <h3 className="lg:text-AgH3 text-center font-bold m-8 text-black">
               Testimonials and Reviews
           </h3>
-          <div className='container'>
+          <div className=''>
               <Swiper
                   effect={'coverflow'}
                   grabCursor={true}

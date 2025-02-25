@@ -60,7 +60,7 @@ const HomeSlider = () => {
         slideInterval = setInterval(nextSlide, intervalTime);
     }
     return (
-        <div className="slider lg:p-0 h-full mt-12 pt-10">
+        <div className="slider  h-full ">
             <MdOutlineArrowCircleLeft
                 onClick={prevSlide}
                 className=" arrow arrow-prev"
@@ -72,7 +72,7 @@ const HomeSlider = () => {
             {slider.map((slide, index) => (
                 <div
                     className={
-                        index === currentSlide ? 'slide currrent' : 'slide'
+                        index === currentSlide ? 'slide current' : 'slide'
                     }
                     key={index}
                 >

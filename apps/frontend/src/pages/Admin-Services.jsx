@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import servicesData from '../lib/servicesData'
-import ServiceCard from '../Components/Service-Card'
-import AdminServicePopUp from '../Components/Admin-Service-PopUp'
+import {ServicesPageData} from '../lib/servicesData'
+import ServiceCard from '../components/Service-Card'
+import AdminServicePopUp from '../components/Admin-Service-PopUp'
 const AdminServices = () => {
     const [popUp, setPopUp] = useState({
         show: false,
@@ -39,7 +39,7 @@ const AdminServices = () => {
         </div>
         // testimonails
         // footer
-    )
+    );
 }
 
 export default AdminServices

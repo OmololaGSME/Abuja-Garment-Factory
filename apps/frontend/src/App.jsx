@@ -1,5 +1,6 @@
 import Routing from "./Routing"
 
+
 function App() {
 
  {/* React.useEffect(() => {
@@ -13,10 +14,12 @@ function App() {
   }, []); */}
 
   return (
-    <>
-      <Routing />
-    </>
-  )
+      <div className="pt-36 ">
+          <>
+              <Routing />
+          </>
+      </div>
+  );
 }
 
 export default App;

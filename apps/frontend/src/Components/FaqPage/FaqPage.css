@@ -67,7 +67,19 @@
 }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:650px) {
+      .accordion{
+    width:500px;
+    height: 100vh;
+    gap:32px ;
+    text-align: center;
+    justify-content: center;
+}
+
+}
+
+
+@media screen and (max-width:500px) {
 
       .accordion{
     width: 300px;

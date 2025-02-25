@@ -14,6 +14,15 @@ import Products from './pages/Products/products'
 import AdminPage from './pages/AdminPage'
 import ImageSavedPage from './pages/ImageSavedPage'
 import ProductsUploadPage from './pages/ProductsUploadPage'
+import FooterPage from './pages/FooterPage'
+import DevelopersNotePage from './pages/FooterCookies/DevelopersNotePage'
+import PrivacyPage from './pages/FooterCookies/PrivacyPage'
+import ProductTitlePopUp from './pages/ProductTitlePopUp'
+
+
+
+
+
 
 
 
@@ -54,6 +63,22 @@ const Routing = () => {
 
             <Routes>
                 <Route path='/products' element={<Products />}></Route>
+            </Routes>
+
+            <Routes>
+                <Route path='/product-pop-up' element={<ProductTitlePopUp />}></Route>
+            </Routes>
+
+            <Routes>
+                <Route path='/footer' element={<FooterPage />}></Route>
+            </Routes>
+
+            <Routes>
+                <Route path='/developer/note' element={<DevelopersNotePage />}></Route>
+            </Routes>
+
+            <Routes>
+                <Route path='/privacy' element={<PrivacyPage />}></Route>
             </Routes>
 
            

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { AiOutlinePlusCircle, AiOutlineMinusCircle} from 'react-icons/ai';
 import './FaqPage.css'
 
 const FaqPage = () => {
@@ -44,7 +45,7 @@ const FaqPage = () => {
 
     return (
         <div className="faq mt-10 text-center">
-            <h2 className="font-bold text-center lg:text-3xl">
+            <h2 className="font-bold text-center lg:text-AgH3">
                 Frequently asked questions
             </h2>
             <p className="font-bold text-center lg:text-3xl text-2xl ">
@@ -56,16 +57,24 @@ const FaqPage = () => {
                     <div className="items">
                         <div className="title" onClick={() => toggle(index)}>
                             <h9 className="font-bold">{items.Questions}</h9>
-                            <span>{selected === index ? '-' : '+'}</span>
+                            <span className="text-secondaryNine">
+                                {selected === index
+                                    ? <AiOutlineMinusCircle />
+                                    : <AiOutlinePlusCircle />}
+                            </span>
                         </div>
-                        <div className={selected === index ? 'content show' : 'content'}>
+                        <div
+                            className={
+                                selected === index ? 'content show' : 'content'
+                            }
+                        >
                             {items.Answer}
                         </div>
                     </div>
                 ))}
             </div>
         </div>
-    )
+    );
 }
 
 export default FaqPage

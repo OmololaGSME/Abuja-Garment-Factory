@@ -13,7 +13,7 @@ const AuthForm = () => {
             <h1 className="mb-4 text-2xl md:text-4xl font-semibold w-3/4 mx-auto">
                 {isLoginPage ? 'Login' : 'Forgot Password'}
             </h1>
-            <input
+            <in-put
                 type="email"
                 name="email"
                 placeholder="Enter email address"
